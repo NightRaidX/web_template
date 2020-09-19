@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Home{% endblock %}
+{% block stylesheets %}
+    <style>
+        .mb-3{
+            text-align: center;
+            margin-top: 3%;
+            font-weight: bold;
+            background-color: #E9EFCE;
+        }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+    <br>
+    <br>
+    <br>
+       {% if app.user %}
+        <div class="mb-3">
+            You are logged in as  {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h1 class="display-3">Welkom op bedrijf...</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+            <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+        </header>
+        <br>
+        <br>
+        <br>
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Artikel 1</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/product" class="btn btn-primary">Naar Product!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Artikel 2</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/product" class="btn btn-primary">Naar Product!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Artikel 3</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/product" class="btn btn-primary">Naar Product!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Artikel 4</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/product" class="btn btn-primary">Naar Product!</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website Nabil 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+{% endblock %}
